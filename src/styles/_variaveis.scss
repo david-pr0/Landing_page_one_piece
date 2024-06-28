@@ -1,0 +1,12 @@
+//fontes
+@font-face {
+    font-family: OnePiece;
+    src: url(../../src/assets/fonts/one_piece.ttf);
+}
+
+$fontePrincipal: OnePiece;
+
+//cores
+$corTextoPrincipal: #00B7F0;
+$corTextoSecundario: #006AB6;
+$corFundo: #1f2830;

@@ -1,0 +1,19 @@
+@use 'variaveis';
+@use 'header';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: variaveis.$fontePrincipal, sans-serif;
+}
+
+@mixin title($fontSize: 40px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoSecundario;
+}
+
+.title {
+    @include title;
+}
