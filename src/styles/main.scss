@@ -1,5 +1,6 @@
 @use 'variaveis';
 @use 'header';
+@use 'pirates';
 
 * {
     margin: 0;
@@ -16,4 +17,8 @@
 
 .title {
     @include title;
+}
+
+.title--big {
+    @include title(48px);
 }
