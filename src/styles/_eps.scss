@@ -1,0 +1,38 @@
+.eps {
+    &__container {
+        padding: 5.6vw;
+    }
+    &__select {
+        font-family: sans-serif;
+        color: #fff;
+        font-size: 22px;
+        padding: 16px;
+        cursor: pointer;
+        &__item {
+            font-family: sans-serif;
+        }
+    }
+
+    &__watch {
+        padding: 16px 0;
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        &--is-active {
+            display: grid;
+        }
+
+        &__item {
+            max-width: 100%;
+            border: 5px solid black;
+            border-radius: 4px;
+            margin: 8px 0;
+            cursor: pointer;
+            img {
+                max-width: 100%;
+            }
+        }
+
+
+    }
+}
