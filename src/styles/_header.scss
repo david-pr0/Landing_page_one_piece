@@ -1,8 +1,5 @@
-@use 'variaveis';
-
 .header {
     height: 10vw;
-    background-color: variaveis.$corFundo;
     position: sticky;
     top: 0;
     left: 0;
@@ -31,7 +28,7 @@
                 transition: all 0.5s ease;
 
                 &:hover {
-                    transform: scale(1.5);
+                    transform: scale(1.3);
                 }
     
                 a {

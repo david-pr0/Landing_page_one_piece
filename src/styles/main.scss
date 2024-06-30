@@ -1,18 +1,28 @@
 @use 'variaveis';
 @use 'header';
 @use 'pirates';
+@use 'resumo';
+@use 'hero';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: variaveis.$fontePrincipal, sans-serif;
+    background-color: variaveis.$corFundo;
 }
 
 @mixin title($fontSize: 40px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
-    color: variaveis.$corTextoSecundario;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin text($fontSize: 18px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    font-family: sans-serif;
+    color: #fff
 }
 
 .title {
@@ -21,4 +31,12 @@
 
 .title--big {
     @include title(48px);
+}
+
+.text {
+    @include text;
+}
+
+.text--big {
+    @include text(22px);
 }

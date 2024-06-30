@@ -1,0 +1,14 @@
+.resumo {
+    &__content {
+        padding: 0 5.6vw 5.6vw;
+        display: none;
+        text-align: justify;
+
+        &--is-selected {
+            display: block;
+        }
+        h2 {
+            padding: 8px 0;
+        }
+    }
+}
