@@ -3,6 +3,46 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    @media (max-width: 1023px) {
+        grid-template-columns: 1fr;
+        &__content {
+            order: 2;
+            &__item {
+                h2 {
+                    font-size: 30px;
+                    text-align: center;
+                }
+                img {
+                    height: 350px;
+                }
+            }
+        }
+        &__list {
+            margin-top: 0 !important;
+            grid-template-columns: repeat(5 , 1fr) !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        &__content {
+            order: 2;
+            &__item {
+                h2 {
+                    font-size: 30px;
+                    text-align: center;
+                }
+                img {
+                    height: 250px;
+                }
+            }
+        }
+        &__list {
+            margin-top: 0 !important;
+            grid-template-columns: repeat(4 , 1fr) !important;
+        }
+    }
+
     &__content {
         margin-right: 8px;
         &__item {

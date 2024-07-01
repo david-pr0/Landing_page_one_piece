@@ -1,5 +1,18 @@
 .resumo {
     &__content {
+        @media (max-width: 1023px) {
+            h2 {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            h2 {
+                display: none;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
         padding: 0 5.6vw;
         display: none;
         text-align: justify;
