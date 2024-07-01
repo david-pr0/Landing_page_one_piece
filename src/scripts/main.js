@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const crews = document.querySelectorAll('[data-tab-crew]');
-
-
+    
     //seção piratas
+    const crews = document.querySelectorAll('[data-tab-crew]');
     for (let i = 0; i < crews.length; i ++) {
         crews[i].addEventListener('click', function(crew) {
             const abaAlvo = crew.target.dataset.tabCrew;
@@ -25,6 +24,24 @@ document.addEventListener('DOMContentLoaded', function(){
         ocultaTemporada();
         ep.classList.add('eps__watch--is-active')
     });
+
+    //configurando os links
+    const links = document.querySelectorAll('.nav-link');
+    for (let i = 0; i < links.length; i ++) {
+        links[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const position = elementPosition - headerHeight;
+
+            window.scrollTo({
+                top: position,
+                behavior: 'smooth'
+            })
+        })
+    }
 
     //funções
     function ocultaAba () {
