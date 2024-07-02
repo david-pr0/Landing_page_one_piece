@@ -19,7 +19,7 @@
     color: variaveis.$corTextoPrincipal;
 }
 
-@mixin text($fontSize: 18px) {
+@mixin text($fontSize: 14px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     font-family: sans-serif;
@@ -38,6 +38,3 @@
     @include text;
 }
 
-.text--big {
-    @include text(22px);
-}

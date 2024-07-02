@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(){
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            const headerHeight = document.querySelector('header').offsetHeight;
+            const headerHeight = document.querySelector('nav').offsetHeight;
             const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
             const position = elementPosition - headerHeight;
 

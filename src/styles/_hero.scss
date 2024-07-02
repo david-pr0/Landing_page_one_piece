@@ -1,11 +1,27 @@
 .hero {
     padding: 5.6vw;
     background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (min-width: 1600px) {
+        &__container {
+            max-width: 70% !important;
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+    @media (min-width: 1024px) {
+        background-position: right;
+    }
     @media (max-width: 1023px) {
         background-image: url(../images/hero_mobile.jpg);
         background-repeat: no-repeat;
         background-size: contain;
         padding-top: 140vw;
+        &__container {
+            max-width: 100% !important;
+        }
         h2 {
             display: none;
         }
@@ -18,6 +34,9 @@
         &__container {
             padding-top: 130vw;
             background-color: transparent;
+            &__container {
+                max-width: 100% !important;
+            }
             h2 {
                 background-color: transparent;
             }
@@ -28,21 +47,21 @@
         }
     }
 
-    background-repeat: no-repeat;
-    background-size: cover;
-
     &__container {
-        max-width: 780px;
+        max-width: 55%;
         text-align: justify;
+        background-color: transparent;
         h2 {
             padding: 16px 0;
             text-align: center;
             font-size: 80px;
             margin: 16px;
+            background-color: transparent;
         }
 
         p {
             margin: 8px;
+            background-color: transparent;
         }
     }
 }
